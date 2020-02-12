@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fa2-Ih-iBP">
-    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,11 +18,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ModuloTechTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1X2-Tv-3Zn">
-                                <rect key="frame" x="12" y="148" width="351" height="40"/>
+                                <rect key="frame" x="12" y="104" width="351" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97X-Cm-lhc" customClass="MTButton" customModule="ModuloTechTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="40"/>
@@ -63,7 +63,7 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="khC-uI-Wn1">
-                                <rect key="frame" x="32" y="220" width="311" height="572"/>
+                                <rect key="frame" x="32" y="176" width="311" height="471"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DpU-gB-aHb">
                                     <size key="itemSize" width="50" height="50"/>
@@ -84,7 +84,7 @@
                                 </cells>
                             </collectionView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xjp-tx-Vbr">
-                                <rect key="frame" x="169" y="487.66666666666669" width="37" height="37.000000000000057"/>
+                                <rect key="frame" x="169" y="393" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -126,7 +126,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="DetailViewController" id="LJj-2D-H9P" customClass="ContainerTableTableViewController" customModule="ModuloTechTest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Gq-Jc-k9Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
@@ -144,7 +144,7 @@
                                                     <color key="onTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFq-os-9EB">
-                                                    <rect key="frame" x="15.999999999999996" y="29" width="50.666666666666657" height="20"/>
+                                                    <rect key="frame" x="16" y="29" width="50.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="ITCAvantGardePro-Bk" family="ITC Avant Garde Gothic Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -284,7 +284,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTENSITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfs-uZ-6BA">
-                                                    <rect key="frame" x="16" y="29" width="85.333333333333329" height="20"/>
+                                                    <rect key="frame" x="16" y="29" width="85.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="ITCAvantGardePro-Bk" family="ITC Avant Garde Gothic Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -357,7 +357,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fa2-Ih-iBP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="VpX-VR-GgD">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -374,11 +374,11 @@
             <objects>
                 <viewController id="eTw-th-vX9" customClass="ProfilViewController" customModule="ModuloTechTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o2A-0Z-ZyJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="XTL-GI-bgj">
-                                <rect key="frame" x="87.666666666666686" y="88" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="88" width="200" height="200"/>
                                 <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="RMO-Ly-1eF"/>
@@ -386,7 +386,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="XEy-In-xwj">
-                                <rect key="frame" x="16" y="367.33333333333331" width="343" height="240.99999999999994"/>
+                                <rect key="frame" x="16" y="367.5" width="343" height="310"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-PD-Yyr" customClass="MaterialTextField" customModule="ModuloTechTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
@@ -467,7 +467,33 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crf-Tq-ajm" userLabel="Country" customClass="MaterialTextField" customModule="ModuloTechTest" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="207.00000000000006" width="343" height="34"/>
+                                        <rect key="frame" x="0.0" y="207" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableFloatingTitle" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBottomLineColor">
+                                                <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveBottomLineColor">
+                                                <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorBottomLineColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleActiveTextColor">
+                                                <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleInactiveTextColor">
+                                                <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthdate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mvn-fk-Ife" customClass="MaterialTextField" customModule="ModuloTechTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="276" width="343" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <userDefinedRuntimeAttributes>
@@ -495,7 +521,7 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fou-aW-XxN">
-                                <rect key="frame" x="0.0" y="304" width="375" height="47.333333333333314"/>
+                                <rect key="frame" x="0.0" y="304" width="375" height="47.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -524,6 +550,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="birthdateTF" destination="Mvn-fk-Ife" id="P9x-qi-gzs"/>
                         <outlet property="cityNameTF" destination="9lX-j6-mko" id="1VO-Cd-bPB"/>
                         <outlet property="countryNameTF" destination="crf-Tq-ajm" id="sBB-Xd-ITl"/>
                         <outlet property="postCodeTF" destination="zcp-CP-H6m" id="ikm-hR-ppf"/>
@@ -560,7 +587,7 @@
                 <navigationController storyboardIdentifier="navDetail" automaticallyAdjustsScrollViewInsets="NO" id="xbN-uE-wEH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="AP8-c6-7rZ">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -574,7 +601,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profil-icon" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="profil-icon" width="25" height="25"/>
         <image name="user" width="512" height="512"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>

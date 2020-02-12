@@ -33,9 +33,11 @@ class ViewController: UIViewController {
     
     func filter(sender: MTButton, device: String) {
         if sender.active {
+//            Get all the other product type exept for the one I unclick
             devicesArray = devicesArray?.filter( {$0.productType != device })
             collectionView.reloadData()
         } else {
+//                Check if a filter button is selected, if so, set the datasource array to this filter one
             if !lightButton.active {
                 devicesArray = (response?.devices.filter({ ($0.productType == "Light") }))!
             }
@@ -78,7 +80,9 @@ class ViewController: UIViewController {
                 
                 do {
                     let decoder = JSONDecoder()
+//                    Parse JSON
                     self.response = try decoder.decode(Response.self, from: data)
+//                    Set datasource array to the respinse devices
                     self.devicesArray = self.response?.devices
                     self.collectionView.reloadData()
                 } catch let jsonErr {
@@ -92,6 +96,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToProfilSegue" {
             let navVC = segue.destination as! UINavigationController
+//            Pass data to ProfilVC
             let destinationVC = navVC.viewControllers.first as! ProfilViewController
             destinationVC.user = response?.user
         }
@@ -100,20 +105,24 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        Set number of items to number of devices in array
         return devicesArray?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        Set custom cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)  as! DeviceCell
         cell.delegate = self
         cell.deviceName.text = devicesArray?[indexPath.item].deviceName
         cell.productType = (devicesArray?[indexPath.item].productType)!
         cell.infos.text = getInfos(item: indexPath.item)
+//        Stop spinner because data has been found
         activityIndicator.stopAnimating()
         return cell
     }
     
     func getInfos(item: Int) -> String {
+//        Text infos below device name
         var infos = ""
         if let result = devicesArray?[item].mode {
             infos += "Mode: \(result) "
@@ -148,6 +157,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         if let indexPath = collectionView?.indexPathsForVisibleItems {
             for indexPath in indexPath {
                 if let cell = collectionView.cellForItem(at: indexPath) as? DeviceCell {
+//                    Show/Hide edit button if the user tap on edit bar button item
                     cell.isEditing = editing
                 }
             }
@@ -155,16 +165,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        Present ContainerVC for the cell
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! ContainerTableTableViewController
         controller.device = devicesArray?[indexPath.item]
-        self.navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
 extension ViewController: DeviceCellDelegate {
     func delete(cell: DeviceCell) {
         if let indexPath  = collectionView.indexPath(for: cell) {
+//            Remove cell
             devicesArray?.remove(at: indexPath.item)
             collectionView.deleteItems(at: [indexPath])
         }

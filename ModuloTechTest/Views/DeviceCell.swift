@@ -18,12 +18,14 @@ class DeviceCell: UICollectionViewCell {
     
     var productType: String? {
         didSet {
+//            Set background color and icon according to the product type
             setupProductCellForType()
         }
     }
     
     var isEditing: Bool = false {
         didSet {
+//            show/hide editing button with animation
             self.removeButton.alpha = 0
             self.removeButton.isHidden = !isEditing
 
@@ -73,6 +75,7 @@ class DeviceCell: UICollectionViewCell {
     }
     
     @objc func deletePressed() {
+//        Remove collection view cell
         delegate?.delete(cell: self )
     }
     

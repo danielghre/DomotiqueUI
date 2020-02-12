@@ -59,11 +59,12 @@ class ContainerTableTableViewController: UITableViewController {
     }
     
     @IBAction func intensityChanged(_ sender: UISlider) {
-      intensityLabel.text = String(Int(sender.value))
+        intensityLabel.text = String(Int(sender.value))
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
+//        Hide row if product doesn't conform to it's mode position temperature or intensity
         if device?.mode == nil {
             if indexPath.section == 0 {
                 return 0

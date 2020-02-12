@@ -8,14 +8,13 @@
 
 import UIKit
 import QuartzCore
-let floatingTitleLabelHeight = 10
+let floatingTitleLabelHeight = 20
 public extension String {
     
     func substring(_ r: Range<Int>) -> String {
         let fromIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
         let toIndex = self.index(self.startIndex, offsetBy: r.upperBound)
         return String(self[Range<String.Index>(uncheckedBounds: (lower: fromIndex, upper: toIndex))])
-//    return self.substring(with: Range<String.Index>(uncheckedBounds: (lower: fromIndex, upper: toIndex)))
     }
     func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
@@ -36,23 +35,10 @@ class MaterialTextField: UITextField {
         didSet {
             if setErrorAlertActive {
                 bottomLineLayer.backgroundColor = errorBottomLineColor.cgColor
-//        bubbleLayer = CAShapeLayer()
-//        bubbleLayer.path = bubblePathForContentSize(contentSize: self.bounds.size).cgPath
-//        bubbleLayer.fillColor = errorBottomLineColor.cgColor
-////        bubbleLayer.strokeColor = borderColor.CGColor
-//        bubbleLayer.lineWidth = borderWidth
-//        bubbleLayer.position = CGPoint(x:self.frame.minX, y:self.frame.maxY + 5)
-//        self.superview?.layer.addSublayer(bubbleLayer)
             }
         }
     }
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
+
     required init?(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
         setup()
@@ -81,7 +67,7 @@ class MaterialTextField: UITextField {
     }
     
     @IBInspectable var enableFloatingTitle : Bool = false
-    public var titleFont : UIFont = UIFont.systemFont(ofSize: 14)
+    public var titleFont : UIFont = .italicSystemFont(ofSize: 14)
     
     @IBInspectable var activeBottomLineColor:UIColor = UIColor.clear {
         didSet {
