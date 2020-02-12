@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var rollerShutterbutton: MTButton!
     @IBOutlet private weak var heaterButton: MTButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBAction func lightPressed(_ sender: MTButton) {
         filter(sender: sender, device: "Light")
@@ -108,6 +109,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.deviceName.text = devicesArray?[indexPath.item].deviceName
         cell.productType = (devicesArray?[indexPath.item].productType)!
         cell.infos.text = getInfos(item: indexPath.item)
+        activityIndicator.stopAnimating()
         return cell
     }
     

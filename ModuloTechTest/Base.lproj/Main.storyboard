@@ -83,12 +83,17 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xjp-tx-Vbr">
+                                <rect key="frame" x="169" y="487.66666666666669" width="37" height="37.000000000000057"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="khC-uI-Wn1" firstAttribute="top" secondItem="1X2-Tv-3Zn" secondAttribute="bottom" constant="32" id="0Ot-gY-3uc"/>
+                            <constraint firstItem="xjp-tx-Vbr" firstAttribute="centerY" secondItem="khC-uI-Wn1" secondAttribute="centerY" id="KOO-1R-JE1"/>
                             <constraint firstItem="1X2-Tv-3Zn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="MFS-4z-uh3"/>
                             <constraint firstItem="khC-uI-Wn1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Mqt-45-fWu"/>
+                            <constraint firstItem="xjp-tx-Vbr" firstAttribute="centerX" secondItem="khC-uI-Wn1" secondAttribute="centerX" id="O5A-iJ-lB6"/>
                             <constraint firstItem="khC-uI-Wn1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-32" id="UbE-OH-e11"/>
                             <constraint firstItem="1X2-Tv-3Zn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="aMn-yf-DAM"/>
                             <constraint firstAttribute="bottom" secondItem="khC-uI-Wn1" secondAttribute="bottom" constant="20" symbolic="YES" id="lrG-Hy-ArQ"/>
@@ -105,6 +110,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="xjp-tx-Vbr" id="uLW-k6-66e"/>
                         <outlet property="collectionView" destination="khC-uI-Wn1" id="z53-eJ-Tg5"/>
                         <outlet property="heaterButton" destination="GmG-ae-ykn" id="gmD-cT-Qez"/>
                         <outlet property="lightButton" destination="97X-Cm-lhc" id="LhD-v3-fWb"/>
@@ -113,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1047.2" y="129.31034482758622"/>
         </scene>
         <!--Container Table Table View Controller-->
         <scene sceneID="KcV-pE-ITe">
